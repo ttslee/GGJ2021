@@ -11,14 +11,15 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 playerInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         // playerInput = Vector2.ClampMagnitude(playerInput, 1);
         // Vector2 playerMovement = playerInput * playerSpeed;
         // Vector2 newPos = playerBody.position + playerMovement * Time.fixedDeltaTime;
         // playerBody.MovePosition(newPos);
 
+        
         playerBody.velocity = playerInput * playerSpeed;
-        playerRenderer.SetDirection(playerInput);
+        playerRenderer.SetDirection(playerBody.velocity);
     }
 }
