@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
         // playerBody.MovePosition(newPos);
 
         
-        playerBody.velocity = playerInput * playerSpeed;
+        playerBody.velocity = playerInput.normalized * playerSpeed;
         playerRenderer.SetDirection(playerBody.velocity);
     }
 }
