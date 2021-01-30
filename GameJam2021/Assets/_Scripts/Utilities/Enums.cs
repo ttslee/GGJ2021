@@ -4,7 +4,9 @@ using UnityEngine;
 
 public enum InteractableType
 {
-    KEY,
+    KEY1,
+    KEY2,
+    KEY3,
 }
 
 public enum DirectionType
