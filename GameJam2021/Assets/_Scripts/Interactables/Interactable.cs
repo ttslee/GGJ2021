@@ -63,14 +63,12 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
     {
         isHighlighted = true;
         spriteRenderer.sprite = highlightedSprite;
-        Debug.Log("Highlighted");
     }
 
     private void RemoveHighlight()
     {
         isHighlighted = false;
         spriteRenderer.sprite = regularSprite;
-        Debug.Log("NOT HIGHLITHTEDGA");
     }
 
     public void OnPointerClick(PointerEventData eventData)
