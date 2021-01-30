@@ -4,7 +4,11 @@ using UnityEngine;
 
 public enum InteractableType
 {
-    KEY1,
+    R1KEY1,
+    R1CHEST,
+    R1LETTER,
+    R1DRAWER,
+    R1PAINTING,
     KEY2,
     KEY3,
 }

@@ -28,7 +28,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-
+        GameManager.Instance.checkpoints[interactableType] = true;
     }
 
     private void ShowTooltip()
