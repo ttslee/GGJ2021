@@ -9,14 +9,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int playerSpeed;
 
-    private float horizontalInput;
-    private float verticalInput;
-
     private void FixedUpdate()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-        Vector2 playerInput = new Vector2(horizontalInput, verticalInput);
+        Vector2 playerInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         // playerInput = Vector2.ClampMagnitude(playerInput, 1);
         // Vector2 playerMovement = playerInput * playerSpeed;
