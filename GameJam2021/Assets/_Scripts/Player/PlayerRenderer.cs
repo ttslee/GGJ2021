@@ -21,7 +21,7 @@ public class PlayerRenderer : MonoBehaviour
         float moveSpeed = Mathf.Clamp(direction.magnitude, 0.0f, 1.0f);
         if (direction != Vector2.zero)
         {
-            Debug.Log(direction.x);
+            // Debug.Log(direction.x);
             playerAnim.SetFloat("Horizontal", direction.x);
             playerAnim.SetFloat("Vertical", direction.y);
         }

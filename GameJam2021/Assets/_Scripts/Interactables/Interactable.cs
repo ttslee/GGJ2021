@@ -11,11 +11,13 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
     [TextArea(15, 20)]
     public string textDialogue;
 
+#pragma warning disable 0649
     [SerializeField]private SpriteRenderer spriteRenderer;
     [SerializeField]private Sprite regularSprite;
     [SerializeField]private Sprite highlightedSprite;
     [SerializeField]private Sprite tooltipIndicator;
-    
+#pragma warning disable 0649
+
     public bool isHighlighted = false;
     private bool playerInSight = false;
 
@@ -39,26 +41,28 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
     }
 
-    private void OnCollisionExit(Collision other) 
-    {
-        RemoveHighlight();    
-    }
-
-    private void OnCollisionEnter(Collision other) 
+    private void OnTriggerEnter2D(Collider2D other) 
     {
         Highlight();
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        RemoveHighlight(); 
     }
 
     private void Highlight()
     {
         isHighlighted = true;
         spriteRenderer.sprite = highlightedSprite;
+        Debug.Log("Highlighted");
     }
 
     private void RemoveHighlight()
     {
         isHighlighted = false;
         spriteRenderer.sprite = regularSprite;
+        Debug.Log("NOT HIGHLITHTEDGA");
     }
 
     public void OnPointerClick(PointerEventData eventData)
