@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class PlayerRenderer : MonoBehaviour
 {
-    public static readonly string[] idleDirections = {"IdleUp", "IdleUpLeft", "IdleLeft", "IdleDownLeft", "IdleDown", "IdleDownRight", "IdleRight", "IdleUpRight"};
-    public static readonly string[] walkDirections = {"WalkUp", "WalkUpLeft", "WalkLeft", "WalkDownLeft", "WalkDown", "WalkDownRight", "WalkRight", "WalkUpRight"};
+    private static readonly string[] idleDirections = { "IdleUp", "IdleUpLeft", "IdleLeft", "IdleDownLeft", "IdleDown", "IdleDownRight", "IdleRight", "IdleUpRight" };
+    private static readonly string[] walkDirections = { "WalkUp", "WalkUpLeft", "WalkLeft", "WalkDownLeft", "WalkDown", "WalkDownRight", "WalkRight", "WalkUpRight" };
 
     [SerializeField]
     private Animator playerAnim;
-    private int lastDirection;
+    [SerializeField]
+    private PlayerLight playerLight;
 
+    private int lastDirection;
     private int sliceCount = 8;
     private float step;
     private float halfStep;
@@ -40,7 +42,7 @@ public class PlayerRenderer : MonoBehaviour
         {
             directionArray = walkDirections;
             lastDirection = DirectionToIndex(direction, 8);
-            Debug.Log(lastDirection);
+            playerLight.SetLight(lastDirection);
         }
         playerAnim.Play(directionArray[lastDirection]);
     }
