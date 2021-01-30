@@ -19,6 +19,8 @@ public class Interactable : MonoBehaviour
     [SerializeField]private Sprite regularSprite;
     [SerializeField]private Sprite highlightedSprite;
     [SerializeField]private Sprite tooltipIndicator;
+    [SerializeField]private AudioClip proximitySound;
+    [SerializeField]private AudioClip selectionSound;
 #pragma warning disable 0649
 
     public bool isHighlighted = false;
@@ -46,11 +48,15 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        if(proximitySound != null)
+            AudioManager.Instance.PlayEffect(proximitySound);
         Highlight();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if(proximitySound != null)
+            AudioManager.Instance.StopEffect();
         RemoveHighlight(); 
     }
 

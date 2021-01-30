@@ -29,4 +29,9 @@ public class AudioManager : Singleton<AudioManager>
         effectSource.clip = clip;
         effectSource.Play();
     }
+
+    public void StopEffect()
+    {
+        effectSource.Stop();
+    }
 }
