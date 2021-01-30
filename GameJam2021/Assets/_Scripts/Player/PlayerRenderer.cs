@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerRenderer : MonoBehaviour
@@ -10,7 +11,8 @@ public class PlayerRenderer : MonoBehaviour
     [SerializeField]
     private PlayerLight playerLight;
 
-    private int lastDirection;
+    private int delayedDirection = 5; // DownRight
+    private int lastDirection = 5;
     private int sliceCount = 8;
     private float step;
     private float halfStep;
@@ -37,10 +39,14 @@ public class PlayerRenderer : MonoBehaviour
         if (direction.magnitude < .01f)
         {
             directionArray = idleDirections;
+            if (delayedDirection != lastDirection && (
+                delayedDirection == 1 || delayedDirection == 3 || delayedDirection == 5 || delayedDirection == 7))
+                lastDirection = delayedDirection;
         }
         else // If player is moving
         {
             directionArray = walkDirections;
+            delayedDirection = lastDirection;
             lastDirection = DirectionToIndex(direction, 8);
             playerLight.SetLight(lastDirection);
         }
