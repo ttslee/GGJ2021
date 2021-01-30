@@ -3,9 +3,9 @@ using UnityEngine.EventSystems;
 using System;
 public class Interactable : MonoBehaviour
 {
-    public event Action<Interactable> OnRightClickEvent;
-    public event Action<Interactable> OnPointerEnterEvent;
-    public event Action<Interactable> OnPointerExitEvent;
+    // public event Action<Interactable> OnRightClickEvent;
+    // public event Action<Interactable> OnPointerEnterEvent;
+    // public event Action<Interactable> OnPointerExitEvent;
     public InteractableType interactableType;
 
     [TextArea(5, 5)]

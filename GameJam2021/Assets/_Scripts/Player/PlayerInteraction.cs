@@ -4,8 +4,8 @@ using UnityEngine;
 using System;
 public class PlayerInteraction : MonoBehaviour
 {
-    public event Action<Interactable> OnRightClickEvent;
-    public event Action<Interactable> OnPointerEnterEvent;
+    // public event Action<Interactable> OnRightClickEvent;
+    // public event Action<Interactable> OnPointerEnterEvent;
     
     private void Awake() 
     {
