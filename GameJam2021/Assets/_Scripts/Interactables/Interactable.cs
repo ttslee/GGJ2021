@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
-public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class Interactable : MonoBehaviour
 {
     public event Action<Interactable> OnRightClickEvent;
     public event Action<Interactable> OnPointerEnterEvent;
@@ -26,7 +26,7 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
         spriteRenderer.sprite = regularSprite;
     }
 
-    public void Interact()
+    public virtual void Interact()
     {
 
     }
