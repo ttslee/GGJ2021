@@ -6,5 +6,5 @@ public class GameManager : Singleton<GameManager>
 {
     public Dictionary<InteractableType,bool> checkpoints;
    
-    
+    public bool inWorld = true;
 }
