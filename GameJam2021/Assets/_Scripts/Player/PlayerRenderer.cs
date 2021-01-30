@@ -33,7 +33,7 @@ public class PlayerRenderer : MonoBehaviour
             directionArray = runDirections;
             lastDirection = DirectionToIndex(direction, 8);
         }
-        playerAnim.Play(directionArray[lastDirection]);
+        // playerAnim.Play(directionArray[lastDirection]);
     }
 
     // Converts a Vector2 direction to an index of circle that is sliced # times
