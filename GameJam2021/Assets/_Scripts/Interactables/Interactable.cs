@@ -8,8 +8,11 @@ public class Interactable : MonoBehaviour
     public event Action<Interactable> OnPointerExitEvent;
     public InteractableType interactableType;
 
-    [TextArea(15, 20)]
-    public string textDialogue;
+    [TextArea(5, 5)]
+    public string readyTextDialogue;
+    [TextArea(5, 5)]
+    public string incompleteTextDialogue;
+
 
 #pragma warning disable 0649
     [SerializeField]private SpriteRenderer spriteRenderer;
