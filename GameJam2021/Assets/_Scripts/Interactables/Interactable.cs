@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
-public class Interactable : MonoBehaviour
+public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     // public event Action<Interactable> OnRightClickEvent;
     // public event Action<Interactable> OnPointerEnterEvent;
@@ -19,10 +19,9 @@ public class Interactable : MonoBehaviour
     [SerializeField]private Sprite regularSprite;
     [SerializeField]private Sprite highlightedSprite;
     [SerializeField]private Sprite tooltipIndicator;
-    [SerializeField]private AudioClip proximitySound;
-    [SerializeField]private AudioClip selectionSound;
 #pragma warning disable 0649
-
+    public AudioClip proximitySound;
+    public AudioClip selectionSound;
     public bool isHighlighted = false;
     private bool playerInSight = false;
 
@@ -33,7 +32,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-        GameManager.Instance.checkpoints[interactableType] = true;
+        Debug.Log("Base Interact");
     }
 
     private void ShowTooltip()
@@ -76,7 +75,7 @@ public class Interactable : MonoBehaviour
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.button == PointerEventData.InputButton.Left && isHighlighted)
+        if (isHighlighted)
         {
             Interact();
         }

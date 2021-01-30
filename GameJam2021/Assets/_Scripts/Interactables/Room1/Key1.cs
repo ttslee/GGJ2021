@@ -6,7 +6,7 @@ public class Key1 : Interactable
 {
     public override void Interact()
     {
-        base.Interact();
-        
+        GameManager.Instance.checkpoints[interactableType] = true;
+        AudioManager.Instance.PlayEffect(selectionSound);
     }
 }
