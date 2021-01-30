@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public Enums.InteractableType interactableType;
+    public InteractableType interactableType;
 
     [TextArea(15, 20)]
-    public string dialogue;
+    public string textDialogue;
 
     public void Interact()
     {
