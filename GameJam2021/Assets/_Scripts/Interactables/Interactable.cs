@@ -85,13 +85,15 @@ public class Interactable : MonoBehaviour
     private void Highlight()
     {
         isHighlighted = true;
-        spriteRenderer.sprite = highlightedSprite;
+        if(highlightedSprite)
+            spriteRenderer.sprite = highlightedSprite;
     }
 
     private void RemoveHighlight()
     {
         isHighlighted = false;
-        spriteRenderer.sprite = regularSprite;
+        if(regularSprite)
+            spriteRenderer.sprite = regularSprite;
     }
 
     private void OnMouseDown()
