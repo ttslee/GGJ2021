@@ -27,7 +27,8 @@ public class Interactable : MonoBehaviour
     public bool previousCheckpoint;
     private void Start()
     {
-        spriteRenderer.sprite = regularSprite;
+        if (spriteRenderer != null)
+            spriteRenderer.sprite = regularSprite;
     }
 
     public virtual void Interact()

@@ -358,3 +358,6 @@ MonoBehaviour:
   isPersistent: 1
   displayDialogue: {fileID: 7640857091088036057}
   displayText: {fileID: 7640857092411517561}
+  dialogueSound:
+  - {fileID: 8300000, guid: 71a1a44198f6ec444b0c869a677c2501, type: 3}
+  - {fileID: 8300000, guid: 96397e0c1706de145b606192f2fa4751, type: 3}

@@ -18,6 +18,9 @@ public class DialogueManager : Singleton<DialogueManager>
     private Coroutine textInProgress = null;
     private WaitForSeconds textDelay = new WaitForSeconds(0.01f);
 
+    [SerializeField]
+    private AudioClip[] dialogueSound;
+
     private IEnumerator DetectMouseClick()
     {
         while (inDialogue)
@@ -25,6 +28,7 @@ public class DialogueManager : Singleton<DialogueManager>
             yield return null;
             if (Input.GetMouseButtonDown(0))
             {
+                AudioManager.Instance.PlayEffect(dialogueSound[0]);
                 if (textInProgress != null) waitText = false;
                 else
                 {
@@ -47,6 +51,8 @@ public class DialogueManager : Singleton<DialogueManager>
 
             inDialogue = true;
             StartCoroutine(DetectMouseClick());
+
+            AudioManager.Instance.PlayEffect(dialogueSound[0]);
         }
     }
 

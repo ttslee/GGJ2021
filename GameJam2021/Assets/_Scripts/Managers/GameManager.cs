@@ -19,7 +19,7 @@ public class GameManager : Singleton<GameManager>
     public void ResetGame()
     {
         List<InteractableType> tempKeys = new List<InteractableType>();
-        foreach(InteractableType item in checkpoints.Keys) tempKeys.Add(item);
+        foreach (InteractableType item in checkpoints.Keys) tempKeys.Add(item);
         foreach (InteractableType item in tempKeys) checkpoints[item] = false;
         inWorld = true;
     }
@@ -32,6 +32,6 @@ public class GameManager : Singleton<GameManager>
     {
         menuOpen = true;
         inWorld = false;
-        GameObject.Instantiate(Resources.Load("Prefabs/Menu/Main"));       
+        (GameObject.Instantiate(Resources.Load("Prefabs/Menu/Main")) as GameObject).GetComponent<Menu>().PlaySound();
     }
 }
