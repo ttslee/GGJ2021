@@ -3,25 +3,14 @@ using UnityEngine;
 
 public class PlayerRenderer : MonoBehaviour
 {
-    private static readonly string[] idleDirections = { "IdleUp", "IdleUpLeft", "IdleLeft", "IdleDownLeft", "IdleDown", "IdleDownRight", "IdleRight", "IdleUpRight" };
-    private static readonly string[] walkDirections = { "WalkUp", "WalkUpLeft", "WalkLeft", "WalkDownLeft", "WalkDown", "WalkDownRight", "WalkRight", "WalkUpRight" };
-
     [SerializeField]
     private Animator playerAnim;
     private Vector3 animDelay;
     [SerializeField]
     private PlayerLight playerLight;
 
-    private int lastDirection = 5;
-    private int sliceCount = 8;
-    private float step;
-    private float halfStep;
-
-    private void Awake()
-    {
-        step = 360f / sliceCount;
-        halfStep = step / 2;
-    }
+    private int lastDirection;
+    private int currentDirection;
 
     public void SetDirection(Vector2 direction)
     {
@@ -29,21 +18,55 @@ public class PlayerRenderer : MonoBehaviour
         if (direction != Vector2.zero)
         {
             animDelay = Vector3.Lerp(animDelay, direction, 0.9f);
+            lastDirection = currentDirection;
+            currentDirection = DirectionToIndex(animDelay); 
             playerAnim.SetFloat("Horizontal", animDelay.x);
             playerAnim.SetFloat("Vertical", animDelay.y);
-            lastDirection = DirectionToIndex(animDelay, 8);
+        }
+        else if (direction == Vector2.zero)
+        {
+            if (lastDirection != currentDirection &&
+                lastDirection == 1 || lastDirection == 3 || lastDirection == 5 || lastDirection == 7)
+                currentDirection = lastDirection;
         }
         playerAnim.SetFloat("Speed", moveSpeed);
-        playerLight.SetLight(lastDirection);
+        playerLight.SetLight(currentDirection);
     }
 
-    public int DirectionToIndex(Vector2 direction, int slice)
+    public int DirectionToIndex(Vector2 direction)
     {
-        Vector2 normDir = direction.normalized;
-        float angle = Vector2.SignedAngle(Vector2.up, normDir);
-        angle += halfStep;
-        if (angle < 0) angle += 360;
-        float stepCount = angle / step;
-        return Mathf.FloorToInt(stepCount);
+        if (direction.x == 0 && direction.y == 1)
+        {
+            return 0; // Up
+        }
+        if (direction.x < 0 && direction.y > 0)
+        {
+            return 1; // UpLeft
+        }
+        if (direction.x == -1 && direction.y == 0)
+        {
+            return 2; // Left
+        }
+        if (direction.x < 0 && direction.y < 0)
+        {
+            return 3; // DownLeft
+        }
+        if (direction.x == 0 && direction.y == -1)
+        {
+            return 4; // Down
+        }
+        if (direction.x > 0 && direction.y < 0)
+        {
+            return 5; // DownRight
+        }
+        if (direction.x == 1 && direction.y == 0)
+        {
+            return 6; // Right
+        }
+        if (direction.x > 0 && direction.y > 0)
+        {
+            return 7; // UpRight
+        }
+        return 5;
     }
 }
