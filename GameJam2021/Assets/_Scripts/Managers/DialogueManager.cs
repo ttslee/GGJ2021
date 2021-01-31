@@ -18,10 +18,11 @@ public class DialogueManager : Singleton<DialogueManager>
     private Coroutine textInProgress = null;
     private WaitForSeconds textDelay = new WaitForSeconds(0.01f);
 
-    private void Update()
+    private IEnumerator DetectMouseClick()
     {
-        if (inDialogue)
+        while (inDialogue)
         {
+            yield return null;
             if (Input.GetMouseButtonDown(0))
             {
                 if (textInProgress != null) waitText = false;
@@ -35,14 +36,18 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void EnableDialogue(Interactable obj, string text)
     {
-        selectedObject = obj;
+        if (!inDialogue)
+        {
+            selectedObject = obj;
 
-        myText = text.Split('\n');
-        textIndex = 0;
-        DisplaySentences();
-        displayDialogue.SetActive(true);
+            myText = text.Split('\n');
+            textIndex = 0;
+            DisplaySentences();
+            displayDialogue.SetActive(true);
 
-        inDialogue = true;
+            inDialogue = true;
+            StartCoroutine(DetectMouseClick());
+        }
     }
 
     // Handles displaying the next sentences
@@ -86,6 +91,7 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void EndDialogue()
     {
+        StopAllCoroutines();
         displayDialogue.SetActive(false);
         selectedObject.Finished();
         inDialogue = false;

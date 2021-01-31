@@ -623,8 +623,10 @@ MonoBehaviour:
   interactableType: 5
   readyTextDialogue: 'You feel a deep rumbling in your heart as the power of the
     tome flows through your body. '
-  incompleteTextDialogue: The tome is releasing purple energy from its binding. This
-    looks like the artifact you have been looking for!
+  incompleteTextDialogue: "The tome is releasing purple energy from its binding.
+    This looks like the artifact you have been looking for!\nYou feel a deep rumbling
+    in your heart as the power of the tome flows through your body. \nYou feel a
+    deep rumbling in your heart as the power of the tome flows through your body!"
   spriteRenderer: {fileID: 1134921414}
   regularSprite: {fileID: 21300000, guid: 826fdc044b6c44240881b006284f3275, type: 3}
   highlightedSprite: {fileID: 21300000, guid: 826fdc044b6c44240881b006284f3275, type: 3}
