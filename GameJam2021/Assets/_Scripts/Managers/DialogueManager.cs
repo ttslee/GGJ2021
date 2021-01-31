@@ -10,12 +10,24 @@ public class DialogueManager : Singleton<DialogueManager>
     [SerializeField]
     private TextMeshProUGUI displayText;
 
+    private bool inDialogue = false;
     private Interactable selectedObject;
     private string[] myText;
     private int textIndex;
     private bool waitText = true;
     private Coroutine textInProgress = null;
     private WaitForSeconds textDelay = new WaitForSeconds(0.01f);
+
+    private void Update()
+    {
+        if (inDialogue)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                DisplaySentences();
+            }
+        }
+    }
 
     public void EnableDialogue(Interactable obj, string text)
     {
@@ -25,6 +37,8 @@ public class DialogueManager : Singleton<DialogueManager>
         textIndex = 0;
         DisplaySentences();
         displayDialogue.SetActive(true);
+
+        inDialogue = true;
     }
 
     // Handles displaying the next sentences
@@ -70,5 +84,7 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         displayDialogue.SetActive(false);
         selectedObject.Interact();
+
+        inDialogue = false;
     }
 }
