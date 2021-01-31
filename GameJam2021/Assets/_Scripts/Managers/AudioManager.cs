@@ -4,7 +4,7 @@ using System.Collections;
 public class AudioManager : Singleton<AudioManager>
 {
 #pragma warning disable 0649
-    private AudioClip musicTrack;
+    public AudioClip musicTrack;
     public AudioSource musicSource;
     public AudioSource effectSource;
     [SerializeField]
@@ -23,13 +23,13 @@ public class AudioManager : Singleton<AudioManager>
         MusicVolume = musicVolume;
         EffectVolume = effectVolume;
         tempSteps.AddRange(footSteps);
-        // PlayMusic();
+        PlayMusic();
     }
 
     public void PlayMusic()
     {
         musicSource.loop = true;
-        // musicSource.clip = musicTrack;
+        musicSource.clip = musicTrack;
         musicSource.Play();
     }
 

@@ -24,7 +24,7 @@ public class Cabinet : Interactable
 
     public override void Finished()
     {
-        if(!previousCheckpoint)
+        if(previousCheckpoint)
         {
             AudioManager.Instance.PlayEffect(selectionSound);
             SceneLoader.Instance.Transition(this);
