@@ -6,11 +6,17 @@ public class Key1 : Interactable
 {
     public override void Interact()
     {
-        GameManager.Instance.inWorld = false;
+        base.Interact();
         GameManager.Instance.checkpoints[interactableType] = true;
         if(selectionSound != null)
             AudioManager.Instance.PlayEffect(selectionSound);
         DialogueManager.Instance.EnableDialogue(this, readyTextDialogue);
+        
+    }
+
+    public override void Finished()
+    {
+        base.Finished();
         Destroy(gameObject);
     }
 }

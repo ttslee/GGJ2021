@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
     public AudioClip selectionSound;
     public bool isHighlighted = false;
     private bool playerInSight = false;
-
+    public bool previousCheckpoint;
     private void Start() 
     {
         spriteRenderer.sprite = regularSprite;
@@ -32,7 +32,12 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
     public virtual void Interact()
     {
-        
+        GameManager.Instance.inWorld = false;
+    }
+
+    public virtual void Finished()
+    {
+        GameManager.Instance.inWorld = true;
     }
 
     private void ShowTooltip()
