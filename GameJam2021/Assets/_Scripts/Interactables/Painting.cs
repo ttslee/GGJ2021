@@ -8,4 +8,14 @@ public class Painting : Interactable
     {
         base.Interact();
     }
+
+    public override void Finished()
+    {
+        base.Finished();
+    }
+
+    public override void OpenInteractable()
+    {
+        base.OpenInteractable();
+    }
 }
