@@ -3,9 +3,6 @@ using UnityEngine.EventSystems;
 using System;
 public class Interactable : MonoBehaviour
 {
-    // public event Action<Interactable> OnRightClickEvent;
-    // public event Action<Interactable> OnPointerEnterEvent;
-    // public event Action<Interactable> OnPointerExitEvent;
     public InteractableType interactableType;
 
     [TextArea(5, 5)]
@@ -18,7 +15,6 @@ public class Interactable : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite regularSprite;
     [SerializeField] private Sprite highlightedSprite;
-    [SerializeField] private Sprite tooltipIndicator;
 #pragma warning disable 0649
     public AudioClip proximitySound;
     public AudioClip selectionSound;
@@ -43,7 +39,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void OpenInteractable()
     {
-        
+
     }
 
     private void ShowTooltip()
@@ -89,13 +85,15 @@ public class Interactable : MonoBehaviour
     private void Highlight()
     {
         isHighlighted = true;
-        spriteRenderer.sprite = highlightedSprite;
+        if(highlightedSprite)
+            spriteRenderer.sprite = highlightedSprite;
     }
 
     private void RemoveHighlight()
     {
         isHighlighted = false;
-        spriteRenderer.sprite = regularSprite;
+        if(regularSprite)
+            spriteRenderer.sprite = regularSprite;
     }
 
     private void OnMouseDown()

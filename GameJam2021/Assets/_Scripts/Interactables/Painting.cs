@@ -8,7 +8,7 @@ public class Painting : Interactable
     public override void Interact()
     {
         base.Interact();
-        previousCheckpoint = GameManager.Instance.checkpoints[InteractableType.KEY];
+        DialogueManager.Instance.EnableDialogue(this, readyTextDialogue);
     }
 
     public override void Finished()
