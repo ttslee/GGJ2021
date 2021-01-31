@@ -48,7 +48,12 @@ MonoBehaviour:
   isPersistent: 0
   musicSource: {fileID: 7498219133228278572}
   effectSource: {fileID: 5131038674636508456}
-  footSteps: []
+  footSteps:
+  - {fileID: 8300000, guid: 0ff7d3cd822afc345a0069171f2ad20d, type: 3}
+  - {fileID: 8300000, guid: cd04623e79d371747af19208fb605e34, type: 3}
+  - {fileID: 8300000, guid: d96cdeef7800f7b45aea2bf607b37213, type: 3}
+  - {fileID: 8300000, guid: c46d3f0d89f8c2e428bbe3da93e90eb7, type: 3}
+  - {fileID: 8300000, guid: 7ce9a6d6c2a527845ae255c4dbb1e109, type: 3}
 --- !u!1 &6986834490824286673
 GameObject:
   m_ObjectHideFlags: 0

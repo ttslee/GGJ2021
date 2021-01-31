@@ -4,12 +4,9 @@ using UnityEngine;
 public class AudioManager : Singleton<AudioManager>
 {
 #pragma warning disable 0649
-    // [SerializeField]
-    // private AudioClip musicTrack;
-    [SerializeField]
-    private AudioSource musicSource;
-    [SerializeField]
-    private AudioSource effectSource;
+    private AudioClip musicTrack;
+    public AudioSource musicSource;
+    public AudioSource effectSource;
     [SerializeField]
     private AudioClip[] footSteps;
 
