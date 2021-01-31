@@ -41,8 +41,11 @@ public class PlayerRenderer : MonoBehaviour
                 currentDirection = lastDirection;
         }
         playerAnim.SetFloat("Speed", moveSpeed);
-        playerLight.SetLight(currentDirection);
-        playerDetector.SetDetector(currentDirection);
+
+        if (playerLight != null)
+            playerLight.SetLight(currentDirection);
+        if (playerDetector != null)
+            playerDetector.SetDetector(currentDirection);
     }
 
     public int DirectionToIndex(Vector2 direction)
