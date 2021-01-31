@@ -4,7 +4,7 @@ using UnityEngine;
 using static InteractableType;
 public class GameManager : Singleton<GameManager>
 {
-    public Dictionary<InteractableType,bool> checkpoints = new Dictionary<InteractableType, bool>
+    public Dictionary<InteractableType, bool> checkpoints = new Dictionary<InteractableType, bool>
     {
         {R1KEY1, false},
         {R1LETTER, false},
@@ -12,7 +12,7 @@ public class GameManager : Singleton<GameManager>
         {R1CHEST, false},
         {R1PAINTING, false},
     };
-    
+
     public void ResetGame()
     {
         foreach (var item in checkpoints)
@@ -21,6 +21,12 @@ public class GameManager : Singleton<GameManager>
         }
         inWorld = true;
     }
-    
+
     public bool inWorld = true;
+
+    public void OpenMenu()
+    {
+        inWorld = false;
+        GameObject.Instantiate(Resources.Load("Prefabs/Menu/Main"));       
+    }
 }

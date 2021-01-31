@@ -4,27 +4,20 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    //MAIN MENU
-    [SerializeField]
-    private GameObject credits;
     [SerializeField]
     private GameObject controls;
     [SerializeField]
-    private GameObject control;
+    private GameObject credits;
 
     public void OnPlay()
     {
         SceneLoader.Instance.Load(1);
     }
 
-    public void OnCredits()
+    public void OnResume()
     {
-        credits.gameObject.SetActive(true);
-    }
-
-    public void CloseCredits()
-    {
-        credits.gameObject.SetActive(false);
+        GameManager.Instance.inWorld = true;
+        Destroy(this.gameObject);
     }
 
     public void OnQuit()
@@ -36,10 +29,29 @@ public class Menu : MonoBehaviour
 #endif
     }
 
+    public void OnControls()
+    {
+        controls.SetActive(true);
+    }
+
+    public void CloseControls()
+    {
+        controls.SetActive(false);
+    }
+
+    public void OnCredits()
+    {
+        credits.SetActive(true);
+    }
+
+    public void CloseCredits()
+    {
+        credits.SetActive(false);
+    }
+
     // OPENING
     public void Skip()
     {
         SceneLoader.Instance.Load(2);
     }
-
 }
