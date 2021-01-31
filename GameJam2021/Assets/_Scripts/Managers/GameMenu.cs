@@ -9,7 +9,6 @@ public class GameMenu : MonoBehaviour
 
     private void Update() {
         if(Input.GetKeyDown(KeyCode.Escape))
-            Debug.Log("EZDFAGFS");
             control.SetActive(true);
     }
 
