@@ -17,7 +17,7 @@ public class PlayerRenderer : MonoBehaviour
         if (direction != Vector2.zero)
         {
             // animDelay = direction;
-            animDelay = Vector3.Lerp(animDelay, direction, 0.7f);
+            animDelay = Vector3.Lerp(animDelay, direction, 0.9f);
             lastDirection = currentDirection;
             currentDirection = DirectionToIndex(direction); 
             playerAnim.SetFloat("Horizontal", animDelay.x);
