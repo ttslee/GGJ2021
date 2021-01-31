@@ -5,7 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - completionSound: {instanceID: 0}
-  - clickingSound: {fileID: 8300000, guid: 71a1a44198f6ec444b0c869a677c2501, type: 3}
+  - clickingSound: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
