@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableType: 0
-  readyTextDialogue: An Ornate Key.
+  readyTextDialogue: An Ornate Key. big gains
   incompleteTextDialogue: 
   spriteRenderer: {fileID: 1680285514}
   regularSprite: {fileID: 21300000, guid: 3e69e8a0c5540c44d9cd13d5371ba378, type: 3}
