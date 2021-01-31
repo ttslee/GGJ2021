@@ -35,5 +35,6 @@ public class Cabinet : Interactable
     public override void OpenInteractable()
     {
         cabinetRef.SetActive(true);
+        GameManager.Instance.currentInteractable = cabinetRef;
     }
 }

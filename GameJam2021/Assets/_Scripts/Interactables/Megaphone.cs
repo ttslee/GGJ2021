@@ -7,7 +7,7 @@ public class Megaphone : Interactable
     public override void Interact()
     {
         base.Interact();
-        previousCheckpoint = GameManager.Instance.checkpoints[InteractableType.RECORD];
+        previousCheckpoint = GameManager.Instance.checkpoints[InteractableType.CABINET];
         if(!previousCheckpoint)
         {
             DialogueManager.Instance.EnableDialogue(this, incompleteTextDialogue);

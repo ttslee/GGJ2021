@@ -17,6 +17,7 @@ public class Menu : MonoBehaviour
 
     public void OnResume()
     {
+        GameManager.Instance.menuOpen = false;
         GameManager.Instance.inWorld = true;
         Destroy(this.gameObject);
     }

@@ -24,10 +24,13 @@ public class GameManager : Singleton<GameManager>
         inWorld = true;
     }
 
+    public bool menuOpen = false;
     public bool inWorld = true;
-
+    public GameObject currentInteractable;
+    
     public void OpenMenu()
     {
+        menuOpen = true;
         inWorld = false;
         GameObject.Instantiate(Resources.Load("Prefabs/Menu/Main"));       
     }

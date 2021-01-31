@@ -18,11 +18,15 @@ public class Clock : Interactable
 
     public override void Finished()
     {
-        SceneLoader.Instance.Transition(this);
+        if(previousCheckpoint)
+            SceneLoader.Instance.Transition(this);
+        else
+            base.Finished();
     }
 
     public override void OpenInteractable()
     {
         clockRef.SetActive(true);
+        GameManager.Instance.currentInteractable = clockRef;
     }
 }

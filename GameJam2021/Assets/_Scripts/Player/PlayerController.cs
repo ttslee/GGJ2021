@@ -18,6 +18,13 @@ public class PlayerController : MonoBehaviour
                 GameManager.Instance.OpenMenu();
             }
         }
+        else
+        {
+            if(!GameManager.Instance.menuOpen)
+            {
+                GameManager.Instance.currentInteractable.SetActive(false);
+            }
+        }
     }
 
     private void FixedUpdate()
