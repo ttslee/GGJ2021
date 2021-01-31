@@ -11,15 +11,15 @@ public class PlayerRenderer : MonoBehaviour
 
     private int lastDirection;
     private int currentDirection;
-
     public void SetDirection(Vector2 direction)
     {
         float moveSpeed = Mathf.Clamp(direction.magnitude, 0.0f, 1.0f);
         if (direction != Vector2.zero)
         {
-            animDelay = Vector3.Lerp(animDelay, direction, 0.9f);
+            // animDelay = direction;
+            animDelay = Vector3.Lerp(animDelay, direction, 0.7f);
             lastDirection = currentDirection;
-            currentDirection = DirectionToIndex(animDelay); 
+            currentDirection = DirectionToIndex(direction); 
             playerAnim.SetFloat("Horizontal", animDelay.x);
             playerAnim.SetFloat("Vertical", animDelay.y);
         }
