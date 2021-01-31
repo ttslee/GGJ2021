@@ -15,17 +15,17 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
 
 #pragma warning disable 0649
-    [SerializeField]private SpriteRenderer spriteRenderer;
-    [SerializeField]private Sprite regularSprite;
-    [SerializeField]private Sprite highlightedSprite;
-    [SerializeField]private Sprite tooltipIndicator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite regularSprite;
+    [SerializeField] private Sprite highlightedSprite;
+    [SerializeField] private Sprite tooltipIndicator;
 #pragma warning disable 0649
     public AudioClip proximitySound;
     public AudioClip selectionSound;
     public bool isHighlighted = false;
     private bool playerInSight = false;
     public bool previousCheckpoint;
-    private void Start() 
+    private void Start()
     {
         spriteRenderer.sprite = regularSprite;
     }
@@ -50,18 +50,18 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(proximitySound != null)
+        if (proximitySound != null)
             AudioManager.Instance.PlayEffect(proximitySound);
         Highlight();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(proximitySound != null)
+        if (proximitySound != null)
             AudioManager.Instance.StopEffect();
-        RemoveHighlight(); 
+        RemoveHighlight();
     }
 
     private void Highlight()
@@ -78,7 +78,7 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (isHighlighted)
+        if (isHighlighted && GameManager.Instance.inWorld)
         {
             Interact();
         }
@@ -86,10 +86,10 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        switch(GameManager.Instance.inWorld)
+        switch (GameManager.Instance.inWorld)
         {
             case true:
-                if(playerInSight)
+                if (playerInSight)
                     ShowTooltip();
                 break;
             default:
@@ -100,7 +100,7 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if(!GameManager.Instance.inWorld)
+        if (!GameManager.Instance.inWorld)
             RemoveHighlight();
         else
             HideTooltip();

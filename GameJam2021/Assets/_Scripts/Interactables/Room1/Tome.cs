@@ -7,6 +7,7 @@ public class Tome : Interactable
     
     public override void Interact()
     {
+        base.Interact();
         previousCheckpoint = GameManager.Instance.checkpoints[InteractableType.R1PAINTING];
         if(!previousCheckpoint)
             DialogueManager.Instance.EnableDialogue(this, incompleteTextDialogue);

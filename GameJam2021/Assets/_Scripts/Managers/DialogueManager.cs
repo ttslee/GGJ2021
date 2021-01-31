@@ -24,7 +24,11 @@ public class DialogueManager : Singleton<DialogueManager>
         {
             if (Input.GetMouseButtonDown(0))
             {
-                DisplaySentences();
+                if (textInProgress != null) waitText = false;
+                else
+                {
+                    DisplaySentences();
+                }
             }
         }
     }
