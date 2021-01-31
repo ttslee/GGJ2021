@@ -59,6 +59,7 @@ public class Interactable : MonoBehaviour
             if (other.gameObject.tag == "Player" && proximitySound != null)
             {
                 AudioManager.Instance.PlayEffect(proximitySound);
+                AudioManager.Instance.MusicVolume = .1f;
             }
             if (other.gameObject.tag == "Detector")
             {
@@ -74,6 +75,7 @@ public class Interactable : MonoBehaviour
             if (other.gameObject.tag == "Player" && proximitySound != null)
             {
                 AudioManager.Instance.StopEffect();
+                AudioManager.Instance.MusicVolume = .25f;
             }
             if (other.gameObject.tag == "Detector")
             {
