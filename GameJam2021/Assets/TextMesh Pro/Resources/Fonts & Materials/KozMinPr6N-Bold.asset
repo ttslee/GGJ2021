@@ -59,9 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: KozMinPr6N-Bold
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -968915578
   material: {fileID: 3097920281152044658}
-  materialHashCode: 0
+  materialHashCode: -1446688410
   m_Version: 1.1.0
   m_SourceFontFileGUID: f9e6d72345296404f906e8cd06959874
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: f9e6d72345296404f906e8cd06959874, type: 3}
