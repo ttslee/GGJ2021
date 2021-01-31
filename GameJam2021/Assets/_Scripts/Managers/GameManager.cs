@@ -16,10 +16,9 @@ public class GameManager : Singleton<GameManager>
 
     public void ResetGame()
     {
-        foreach (var item in checkpoints)
-        {
-            checkpoints[item.Key] = false;
-        }
+        List<InteractableType> tempKeys = new List<InteractableType>();
+        foreach(InteractableType item in checkpoints.Keys) tempKeys.Add(item);
+        foreach (InteractableType item in tempKeys) checkpoints[item] = false;
         inWorld = true;
     }
 
