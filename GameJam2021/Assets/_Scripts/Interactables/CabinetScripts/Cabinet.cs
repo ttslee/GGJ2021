@@ -14,6 +14,7 @@ public class Cabinet : Interactable
         {
             AudioManager.Instance.PlayEffect(lockedSound);
             DialogueManager.Instance.EnableDialogue(this, incompleteTextDialogue);
+
         }
         else
         {
@@ -23,7 +24,7 @@ public class Cabinet : Interactable
 
     public override void Finished()
     {
-        if(previousCheckpoint)
+        if(!previousCheckpoint)
         {
             AudioManager.Instance.PlayEffect(selectionSound);
             SceneLoader.Instance.Transition(this);
@@ -34,7 +35,7 @@ public class Cabinet : Interactable
 
     public override void OpenInteractable()
     {
-        cabinetRef.SetActive(true);
         GameManager.Instance.currentInteractable = cabinetRef;
+        cabinetRef.SetActive(true);
     }
 }
