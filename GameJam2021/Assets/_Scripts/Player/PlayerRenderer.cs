@@ -14,7 +14,7 @@ public class PlayerRenderer : MonoBehaviour
     private int lastDirection;
     private int currentDirection;
 
-    private WaitForSeconds stepDelay = new WaitForSeconds(0.55f);
+    private WaitForSeconds stepDelay = new WaitForSeconds(0.4f);
     private bool canStep = true;
 
     public void SetDirection(Vector2 direction)

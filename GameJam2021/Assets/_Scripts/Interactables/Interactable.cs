@@ -40,6 +40,11 @@ public class Interactable : MonoBehaviour
         GameManager.Instance.inWorld = true;
     }
 
+    public virtual void OpenInteractable()
+    {
+        
+    }
+
     private void ShowTooltip()
     {
 

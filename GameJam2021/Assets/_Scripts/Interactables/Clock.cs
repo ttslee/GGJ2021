@@ -18,10 +18,10 @@ public class Clock : Interactable
 
     public override void Finished()
     {
-        OpenInteractable();
+        SceneLoader.Instance.Transition(this);
     }
 
-    public void OpenInteractable()
+    public override void OpenInteractable()
     {
         clockRef.SetActive(true);
     }

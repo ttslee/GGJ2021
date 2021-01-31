@@ -17,7 +17,6 @@ public class Cabinet : Interactable
         }
         else
         {
-            AudioManager.Instance.PlayEffect(selectionSound);
             DialogueManager.Instance.EnableDialogue(this, readyTextDialogue);
         }
     }
@@ -25,12 +24,15 @@ public class Cabinet : Interactable
     public override void Finished()
     {
         if(previousCheckpoint)
-            OpenInteractable();
+        {
+            AudioManager.Instance.PlayEffect(selectionSound);
+            SceneLoader.Instance.Transition(this);
+        }
         else
             base.Finished();
     }
 
-    private void OpenInteractable()
+    public override void OpenInteractable()
     {
         cabinetRef.SetActive(true);
     }

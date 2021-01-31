@@ -59,7 +59,7 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         sceneTransition.SetTrigger("Start");
         yield return StartFadeFinished;
-        // obj.OpenInteract?
+        obj.OpenInteractable();
         sceneTransition.SetTrigger("End");
         yield return EndFadeFinished;
     }
