@@ -22,7 +22,12 @@ public class PlayerController : MonoBehaviour
         {
             if(!GameManager.Instance.menuOpen)
             {
-                GameManager.Instance.currentInteractable.SetActive(false);
+                if(Input.GetKeyDown(KeyCode.Escape))
+                {
+                    GameManager.Instance.currentInteractable.SetActive(false);
+                    GameManager.Instance.inWorld = true;
+                }
+                    
             }
         }
     }
