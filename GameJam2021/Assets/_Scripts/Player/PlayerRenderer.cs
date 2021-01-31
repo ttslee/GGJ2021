@@ -8,10 +8,10 @@ public class PlayerRenderer : MonoBehaviour
 
     [SerializeField]
     private Animator playerAnim;
+    private Vector3 animDelay;
     [SerializeField]
     private PlayerLight playerLight;
 
-    private int delayedDirection = 5; // DownRight
     private int lastDirection = 5;
     private int sliceCount = 8;
     private float step;
@@ -25,35 +25,18 @@ public class PlayerRenderer : MonoBehaviour
 
     public void SetDirection(Vector2 direction)
     {
-        // float moveSpeed = Mathf.Clamp(direction.magnitude, 0.0f, 1.0f);
-        // if (direction != Vector2.zero)
-        // {
-        //     playerAnim.SetFloat("Horizontal", direction.x);
-        //     playerAnim.SetFloat("Vertical", direction.y);
-        // }
-        // playerAnim.SetFloat("Speed", moveSpeed);
-
-        // Holds a reference to an Array (idle or run)
-        string[] directionArray = null;
-        // If player is standing still
-        if (direction.magnitude < .01f)
+        float moveSpeed = Mathf.Clamp(direction.magnitude, 0.0f, 1.0f);
+        if (direction != Vector2.zero)
         {
-            directionArray = idleDirections;
-            if (delayedDirection != lastDirection && (
-                delayedDirection == 1 || delayedDirection == 3 || delayedDirection == 5 || delayedDirection == 7))
-                lastDirection = delayedDirection;
+            animDelay = Vector3.Lerp(animDelay, direction, 0.9f);
+            playerAnim.SetFloat("Horizontal", animDelay.x);
+            playerAnim.SetFloat("Vertical", animDelay.y);
+            lastDirection = DirectionToIndex(animDelay, 8);
         }
-        else // If player is moving
-        {
-            directionArray = walkDirections;
-            delayedDirection = lastDirection;
-            lastDirection = DirectionToIndex(direction, 8);
-            playerLight.SetLight(lastDirection);
-        }
-        playerAnim.Play(directionArray[lastDirection]);
+        playerAnim.SetFloat("Speed", moveSpeed);
+        playerLight.SetLight(lastDirection);
     }
 
-    // Converts a Vector2 direction to an index of circle that is sliced # times
     public int DirectionToIndex(Vector2 direction, int slice)
     {
         Vector2 normDir = direction.normalized;
