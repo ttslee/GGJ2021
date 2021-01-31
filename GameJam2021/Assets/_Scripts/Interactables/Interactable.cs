@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
-public class Interactable : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+public class Interactable : MonoBehaviour
 {
     // public event Action<Interactable> OnRightClickEvent;
     // public event Action<Interactable> OnPointerEnterEvent;
@@ -52,16 +52,32 @@ public class Interactable : MonoBehaviour, IPointerDownHandler, IPointerEnterHan
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (proximitySound != null)
-            AudioManager.Instance.PlayEffect(proximitySound);
-        Highlight();
+        if (other.isTrigger)
+        {
+            if (other.gameObject.tag == "Player" && proximitySound != null)
+            {
+                AudioManager.Instance.PlayEffect(proximitySound);
+            }
+            if (other.gameObject.tag == "Detector")
+            {
+                Highlight();
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (proximitySound != null)
-            AudioManager.Instance.StopEffect();
-        RemoveHighlight();
+        if (other.isTrigger)
+        {
+            if (other.gameObject.tag == "Player" && proximitySound != null)
+            {
+                AudioManager.Instance.StopEffect();
+            }
+            if (other.gameObject.tag == "Detector")
+            {
+                RemoveHighlight();
+            }
+        }
     }
 
     private void Highlight()
@@ -76,16 +92,18 @@ public class Interactable : MonoBehaviour, IPointerDownHandler, IPointerEnterHan
         spriteRenderer.sprite = regularSprite;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    private void OnMouseDown()
     {
+        // Debug.Log("Interact");
         if (isHighlighted && GameManager.Instance.inWorld)
         {
             Interact();
         }
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    private void OnMouseEnter()
     {
+        // Debug.Log("Enter");
         switch (GameManager.Instance.inWorld)
         {
             case true:
@@ -98,8 +116,9 @@ public class Interactable : MonoBehaviour, IPointerDownHandler, IPointerEnterHan
         }
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    private void OnMouseExit()
     {
+        // Debug.Log("Exit");
         if (!GameManager.Instance.inWorld)
             RemoveHighlight();
         else

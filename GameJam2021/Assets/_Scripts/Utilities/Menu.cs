@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
 
     public void OnPlay()
     {
-        GameManager.Instance.inWorld = true;
+        GameManager.Instance.ResetGame();
         SceneLoader.Instance.Load(1);
     }
 
