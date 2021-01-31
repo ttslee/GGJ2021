@@ -16,7 +16,7 @@ public class AudioManager : Singleton<AudioManager>
     private float musicVolume = 0.25f;
     private float effectVolume = 0.25f;
 #pragma warning disable 0649
-    private List<AudioClip> tempSteps;
+    private List<AudioClip> tempSteps = new List<AudioClip>();
 
     public float MusicVolume { get => musicSource.volume; set { musicSource.volume = value; } }
     public float EffectVolume { get => effectSource.volume; set { effectSource.volume = value; } }
