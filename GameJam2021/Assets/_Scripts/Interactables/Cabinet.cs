@@ -25,12 +25,12 @@ public class Cabinet : Interactable
     public override void Finished()
     {
         if(previousCheckpoint)
-            OpenCabinet();
+            OpenInteractable();
         else
             base.Finished();
     }
 
-    private void OpenCabinet()
+    private void OpenInteractable()
     {
         cabinetRef.SetActive(true);
     }
