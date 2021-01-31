@@ -335,9 +335,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableType: 6
-  readyTextDialogue: 
+  readyTextDialogue: Wow, what an amazing portrait
   incompleteTextDialogue: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 202021823}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
   proximitySound: {fileID: 0}
@@ -345,6 +345,11 @@ MonoBehaviour:
   isHighlighted: 0
   previousCheckpoint: 0
   paintingRef: {fileID: 1125832324}
+--- !u!212 &202021823 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 202021816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &210232990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -444,7 +449,7 @@ MonoBehaviour:
   interactableType: 1
   readyTextDialogue: You unlock the cabinet.
   incompleteTextDialogue: The cabinet is locked but it appears to have a keyhole.
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 210232997}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
   proximitySound: {fileID: 0}
@@ -469,56 +474,11 @@ CapsuleCollider2D:
   m_Offset: {x: -0.76, y: 1.93}
   m_Size: {x: 9.16, y: 12.96}
   m_Direction: 0
---- !u!1 &461258694
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!212 &210232997 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 210232990}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 461258695}
-  - component: {fileID: 461258696}
-  m_Layer: 5
-  m_Name: Record
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &461258695
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461258694}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 766861313}
-  m_Father: {fileID: 1350485398}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &461258696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461258694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa05f89bb06f6e54081a6f725a6a068a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickedSound: {fileID: 8300000, guid: 83663fe8f433a1342b44c9bcf20a98f3, type: 3}
 --- !u!1 &481610631
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,13 +833,18 @@ MonoBehaviour:
   interactableType: 5
   readyTextDialogue: Woah, look at that! a book!
   incompleteTextDialogue: What a magnificent old fireplace.
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 689810336}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
   proximitySound: {fileID: 0}
   selectionSound: {fileID: 0}
   isHighlighted: 0
   previousCheckpoint: 0
+--- !u!212 &689810336 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 689810329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &725060236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -891,17 +856,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key2
       objectReference: {fileID: 0}
+    - target: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.75
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalPosition.z
@@ -967,11 +940,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766861312}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 461258695}
+  m_Father: {fileID: 1694193901}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1282,6 +1255,38 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!1 &874724041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996984, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 725060236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &874724042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874724041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf19e5933522fe04685a560268ed4268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableType: 0
+  readyTextDialogue: An even more ornate key!!
+  incompleteTextDialogue: 
+  spriteRenderer: {fileID: 874724045}
+  regularSprite: {fileID: 0}
+  highlightedSprite: {fileID: 0}
+  proximitySound: {fileID: 0}
+  selectionSound: {fileID: 8300000, guid: 13aca3d964f03934c843a7286d360061, type: 3}
+  isHighlighted: 0
+  previousCheckpoint: 0
+--- !u!212 &874724045 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 725060236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &997273767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,11 +1378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4815836
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.6184998
+      value: -8.6
       objectReference: {fileID: 0}
     - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1554,7 +1559,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4296172141843996984, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_Name
-      value: FinalDoor
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_RootOrder
@@ -1845,6 +1850,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e493dee765ee22248b3969484c82240a, type: 3}
+--- !u!1 &1193187357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996984, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 1076835656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1193187358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193187357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe1798adb0aaea43a118c75b8ed7200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableType: 8
+  readyTextDialogue: I wondre if this key will work.
+  incompleteTextDialogue: The door is locked.
+  spriteRenderer: {fileID: 1193187361}
+  regularSprite: {fileID: 0}
+  highlightedSprite: {fileID: 0}
+  proximitySound: {fileID: 0}
+  selectionSound: {fileID: 0}
+  isHighlighted: 0
+  previousCheckpoint: 0
+--- !u!212 &1193187361 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 1076835656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1284147899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1931,7 +1968,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5130079, y: 0.5130079, z: 0.5130079}
   m_Children:
-  - {fileID: 461258695}
+  - {fileID: 1694193901}
   m_Father: {fileID: 2092912379}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2076,13 +2113,18 @@ MonoBehaviour:
   interactableType: 3
   readyTextDialogue: You place the record from the cabinet onto the megaphone.
   incompleteTextDialogue: The megaphone is playing a blank record...
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 1383698300}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
   proximitySound: {fileID: 8300000, guid: 418cab4777d79234cb6e4d693dff5286, type: 3}
   selectionSound: {fileID: 8300000, guid: e79ae154bf7dd004b98aaa63dc341480, type: 3}
   isHighlighted: 0
   previousCheckpoint: 0
+--- !u!212 &1383698300 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 1383698293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1488919786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,14 +2658,19 @@ MonoBehaviour:
   interactableType: 4
   readyTextDialogue: 'I wonder if I can push the numbers... '
   incompleteTextDialogue: It seems like a regular clock.
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 1643017316}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
-  proximitySound: {fileID: 0}
+  proximitySound: {fileID: 8300000, guid: 09facfe16c0545f48995a3ee62880d34, type: 3}
   selectionSound: {fileID: 0}
   isHighlighted: 0
   previousCheckpoint: 0
   clockRef: {fileID: 1948559018}
+--- !u!212 &1643017316 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 1643017309}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1644466079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,7 +2827,7 @@ MonoBehaviour:
   regularSprite: {fileID: 21300000, guid: 3e69e8a0c5540c44d9cd13d5371ba378, type: 3}
   highlightedSprite: {fileID: 21300000, guid: 99272ab9cb445d64d9d09d08250b0283, type: 3}
   proximitySound: {fileID: 0}
-  selectionSound: {fileID: 0}
+  selectionSound: {fileID: 8300000, guid: 13aca3d964f03934c843a7286d360061, type: 3}
   isHighlighted: 0
   previousCheckpoint: 0
 --- !u!212 &1680285514 stripped
@@ -2875,6 +2922,153 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1694193900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694193901}
+  - component: {fileID: 1694193905}
+  - component: {fileID: 1694193904}
+  - component: {fileID: 1694193903}
+  - component: {fileID: 1694193902}
+  m_Layer: 5
+  m_Name: Record
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1694193901
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694193900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 766861313}
+  m_Father: {fileID: 1350485398}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1694193902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694193900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa05f89bb06f6e54081a6f725a6a068a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickedSound: {fileID: 8300000, guid: 83663fe8f433a1342b44c9bcf20a98f3, type: 3}
+--- !u!114 &1694193903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694193900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1694193904}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1694193902}
+        m_TargetAssemblyTypeName: Record, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1694193904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694193900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1694193905
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694193900}
+  m_CullTransparentMesh: 1
 --- !u!4 &1755396420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4227221971633236932, guid: 7ff798533c4967045a973a1d47b9b9b3, type: 3}

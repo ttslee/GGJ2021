@@ -12,6 +12,8 @@ public enum InteractableType
     FIREPLACE,
     PAINTING,
     TOME,
+    KEY2,
+    DOOR
 }
 
 public enum DirectionType

@@ -14,6 +14,7 @@ public class GameManager : Singleton<GameManager>
         {FIREPLACE, false},
         {PAINTING, false},
         {TOME, false},
+        {DOOR, false},
     };
 
     public void ResetGame()
