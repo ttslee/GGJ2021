@@ -10,8 +10,8 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField]
     private AudioClip[] footSteps;
 
-    private float musicVolume = 0.25f;
-    private float effectVolume = 0.25f;
+    private float musicVolume = 0.2f;
+    private float effectVolume = 0.2f;
 #pragma warning disable 0649
     private List<AudioClip> tempSteps = new List<AudioClip>();
 
