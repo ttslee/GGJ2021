@@ -30,6 +30,11 @@ public class Menu : MonoBehaviour
 #endif
     }
 
+    public void OnMenu()
+    {
+        SceneLoader.Instance.Load(0);
+    }
+
     public void OnControls()
     {
         controls.SetActive(true);
