@@ -4,6 +4,8 @@ public class Preload : MonoBehaviour
 {
     private static string[] prefabs = {
             "Prefabs/SceneLoader",
+            "Prefabs/Managers/GameManager",
+            "Prefabs/Managers/DialogueManager"
         };
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
