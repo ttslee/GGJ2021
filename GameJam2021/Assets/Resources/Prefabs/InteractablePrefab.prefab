@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4296172141843996989}
   - component: {fileID: 4296172141843996988}
-  - component: {fileID: 4296172141843996985}
   - component: {fileID: 4296172141843996990}
   - component: {fileID: 4296172141843996991}
   - component: {fileID: 4296172141843996930}
@@ -86,26 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4296172141843996985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4296172141843996984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575cf3600a0641a4a9915326233fa1d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableType: 0
-  readyTextDialogue: 
-  incompleteTextDialogue: 
-  spriteRenderer: {fileID: 4296172141843996988}
-  regularSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  highlightedSprite: {fileID: 21300000, guid: 482803ae4e03ac6478ac1f953807caed, type: 3}
-  tooltipIndicator: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  isHighlighted: 0
 --- !u!50 &4296172141843996990
 Rigidbody2D:
   serializedVersion: 4
