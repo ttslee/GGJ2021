@@ -8,5 +8,6 @@ public class Key1 : Interactable
     {
         GameManager.Instance.checkpoints[interactableType] = true;
         AudioManager.Instance.PlayEffect(selectionSound);
+        Destroy(gameObject);
     }
 }

@@ -6,7 +6,8 @@ public class Menu : MonoBehaviour
 {
     //MAIN MENU
     [SerializeField]private GameObject credits;
-
+    [SerializeField]private GameObject controls;
+    [SerializeField]private GameObject control;
     public void OnPlay()
     {
         SceneLoader.Instance.Load(1);
@@ -36,4 +37,5 @@ public class Menu : MonoBehaviour
     {
         SceneLoader.Instance.Load(2);
     }
+    
 }
