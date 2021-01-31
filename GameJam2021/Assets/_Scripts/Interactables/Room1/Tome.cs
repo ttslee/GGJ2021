@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Tome : Interactable
 {
+    
     public override void Interact()
     {
-        GameManager.Instance.checkpoints[interactableType] = true;
+        bool myCheckpoint = GameManager.Instance.checkpoints[InteractableType.R1PAINTING];
+        if(!myCheckpoint)
+            return;
+        
         AudioManager.Instance.PlayEffect(selectionSound);
     }
 }

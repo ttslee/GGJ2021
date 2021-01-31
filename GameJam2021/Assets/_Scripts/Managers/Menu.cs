@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenu : MonoBehaviour
+public class Menu : MonoBehaviour
 {
+    //MAIN MENU
     [SerializeField]private GameObject credits;
 
     public void OnPlay()
@@ -28,5 +29,11 @@ public class MainMenu : MonoBehaviour
     #else
         Application.Quit();
     #endif
+    }
+
+    // OPENING
+    public void Skip()
+    {
+        SceneLoader.Instance.Load(2);
     }
 }
