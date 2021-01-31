@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int playerSpeed;
 
+    private void Start() {
+        playerRenderer.SetDirection(new Vector2(-0.5f, 0.5f));
+    }
+
     private void Update()
     {
         if (GameManager.Instance.inWorld)

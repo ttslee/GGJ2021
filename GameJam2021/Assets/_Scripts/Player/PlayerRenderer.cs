@@ -82,7 +82,7 @@ public class PlayerRenderer : MonoBehaviour
         {
             return 7; // UpRight
         }
-        return 5;
+        return 1;
     }
 
     public IEnumerator WaitForStep()
