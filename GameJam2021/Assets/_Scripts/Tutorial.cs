@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Tutorial : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Tutorial : MonoBehaviour
     private WaitForSeconds stepDelay = new WaitForSeconds(0.4f);
 
     public AudioClip lanternLight;
+    public Light2D globalLight;
 
     private void Start()
     {
@@ -43,15 +45,16 @@ public class Tutorial : MonoBehaviour
     private IEnumerator SecondAsync()
     {
         yield return new WaitForSeconds(1.5f);
-        playerLight.SetActive(true);
+        globalLight.intensity = Mathf.Lerp(globalLight.intensity, 0.1f, 1f);
         AudioManager.Instance.PlayEffect(lanternLight);
-        yield return new WaitForSeconds(1f);
+        playerLight.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
         Resume();
     }
 
     public void Third()
     {
-        StartCoroutine(SecondAsync());
+        StartCoroutine(ThirdAsync());
     }
 
     private IEnumerator ThirdAsync()

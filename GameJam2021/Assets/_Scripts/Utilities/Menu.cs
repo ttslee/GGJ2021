@@ -5,8 +5,6 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     [SerializeField]
-    private GameObject controls;
-    [SerializeField]
     private GameObject credits;
 
     [SerializeField]
@@ -49,21 +47,6 @@ public class Menu : MonoBehaviour
         PlaySound();
 
         SceneLoader.Instance.Load(0);
-    }
-
-    public void OnControls()
-    {
-        PlaySound();
-
-        if (controls != null)
-            controls.SetActive(true);
-    }
-
-    public void CloseControls()
-    {
-        PlaySound();
-
-        controls.SetActive(false);
     }
 
     public void OnCredits()
