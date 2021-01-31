@@ -4,14 +4,14 @@ using UnityEngine;
 
 public enum InteractableType
 {
-    R1KEY1,
-    R1CHEST,
-    R1LETTER,
-    R1DRAWER,
-    R1PAINTING,
-    R1TOME,
-    KEY2,
-    KEY3,
+    KEY,
+    CABINET,
+    RECORD,
+    MEGAPHONE,
+    CLOCK,
+    FIREPLACE,
+    PAINTING,
+    TOME,
 }
 
 public enum DirectionType

@@ -6,12 +6,14 @@ public class GameManager : Singleton<GameManager>
 {
     public Dictionary<InteractableType, bool> checkpoints = new Dictionary<InteractableType, bool>
     {
-        {R1KEY1, false},
-        {R1LETTER, false},
-        {R1DRAWER, false},
-        {R1CHEST, false},
-        {R1PAINTING, false},
-        {R1TOME, false},
+        {KEY, false},
+        {CABINET, false},
+        {RECORD, false},
+        {MEGAPHONE, false},
+        {CLOCK, false},
+        {FIREPLACE, false},
+        {PAINTING, false},
+        {TOME, false},
     };
 
     public void ResetGame()
