@@ -37,7 +37,8 @@ public class Menu : MonoBehaviour
 
     public void OnControls()
     {
-        controls.SetActive(true);
+        if (controls != null)
+            controls.SetActive(true);
     }
 
     public void CloseControls()
@@ -47,7 +48,8 @@ public class Menu : MonoBehaviour
 
     public void OnCredits()
     {
-        credits.SetActive(true);
+        if (credits != null)
+            credits.SetActive(true);
     }
 
     public void CloseCredits()
