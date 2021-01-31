@@ -14,6 +14,6 @@ public class PlayerController : MonoBehaviour
         Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         playerBody.velocity = playerInput.normalized * playerSpeed;
-        playerRenderer.SetDirection(playerBody.velocity);
+        playerRenderer.SetDirection(playerInput);
     }
 }
