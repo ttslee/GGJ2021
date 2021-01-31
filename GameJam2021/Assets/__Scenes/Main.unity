@@ -491,7 +491,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &999196450
 PrefabInstance:
@@ -554,79 +554,101 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
---- !u!1001 &1054734213
+--- !u!1001 &1134921410
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1623866737}
     m_Modifications:
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996984, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+      propertyPath: m_Name
+      value: Tome
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 12.158417
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.8615003
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.1465743
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
+    - target: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175011, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
-      propertyPath: displayText
-      value: 
-      objectReference: {fileID: 1206946998}
-    - target: {fileID: 1497636228424175011, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
-      propertyPath: isPersistent
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1497636228424175011, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
-      propertyPath: displayDialogue
-      value: 
-      objectReference: {fileID: 868747584}
-    - target: {fileID: 1497636228424175012, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
-      propertyPath: m_Name
-      value: DialogueManager
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
---- !u!4 &1054734214 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+--- !u!4 &1134921411 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1497636228424175010, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
-  m_PrefabInstance: {fileID: 1054734213}
+  m_CorrespondingSourceObject: {fileID: 4296172141843996989, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 1134921410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1134921412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996984, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 1134921410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1134921413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134921412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575cf3600a0641a4a9915326233fa1d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableType: 5
+  readyTextDialogue: 'You feel a deep rumbling in your heart as the power of the
+    tome flows through your body. '
+  incompleteTextDialogue: The tome is releasing purple energy from its binding. This
+    looks like the artifact you have been looking for!
+  spriteRenderer: {fileID: 1134921414}
+  regularSprite: {fileID: 21300000, guid: 826fdc044b6c44240881b006284f3275, type: 3}
+  highlightedSprite: {fileID: 0}
+  tooltipIndicator: {fileID: 0}
+  proximitySound: {fileID: 0}
+  selectionSound: {fileID: 0}
+  isHighlighted: 0
+--- !u!212 &1134921414 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4296172141843996988, guid: c9d7c9bd412b98240a0c40ed759e6409, type: 3}
+  m_PrefabInstance: {fileID: 1134921410}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1167113088
 PrefabInstance:
@@ -641,7 +663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4196609382862489513, guid: e493dee765ee22248b3969484c82240a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4196609382862489513, guid: e493dee765ee22248b3969484c82240a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -905,7 +927,7 @@ Transform:
   m_Children:
   - {fileID: 386520949}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1257537485
 Rigidbody2D:
@@ -1005,7 +1027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5281491917344556059, guid: b7d9cd5b7df1b8d4e85cb4db4132c9c2, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5281491917344556059, guid: b7d9cd5b7df1b8d4e85cb4db4132c9c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1141,8 +1163,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 868747585}
-  m_Father: {fileID: 1054734214}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1177,6 +1199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1680285515}
+  - {fileID: 1134921411}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1297,7 +1320,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1895553517
 GameObject:
@@ -1369,5 +1392,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

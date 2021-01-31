@@ -9,6 +9,7 @@ public enum InteractableType
     R1LETTER,
     R1DRAWER,
     R1PAINTING,
+    R1TOME,
     KEY2,
     KEY3,
 }

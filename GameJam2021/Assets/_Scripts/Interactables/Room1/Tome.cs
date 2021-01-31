@@ -7,10 +7,11 @@ public class Tome : Interactable
     
     public override void Interact()
     {
+        GameManager.Instance.inWorld = false;
         bool myCheckpoint = GameManager.Instance.checkpoints[InteractableType.R1PAINTING];
         if(!myCheckpoint)
-            return;
-        
-        AudioManager.Instance.PlayEffect(selectionSound);
+            
+        if(selectionSound != null)
+            AudioManager.Instance.PlayEffect(selectionSound);
     }
 }
