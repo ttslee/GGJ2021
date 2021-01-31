@@ -10,7 +10,7 @@ public class Tome : Interactable
         GameManager.Instance.inWorld = false;
         bool myCheckpoint = GameManager.Instance.checkpoints[InteractableType.R1PAINTING];
         if(!myCheckpoint)
-            
+            DialogueManager.Instance.EnableDialogue(this, incompleteTextDialogue);
         if(selectionSound != null)
             AudioManager.Instance.PlayEffect(selectionSound);
     }
