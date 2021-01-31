@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
-public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class Interactable : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     // public event Action<Interactable> OnRightClickEvent;
     // public event Action<Interactable> OnPointerEnterEvent;
@@ -76,7 +76,7 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
         spriteRenderer.sprite = regularSprite;
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (isHighlighted && GameManager.Instance.inWorld)
         {

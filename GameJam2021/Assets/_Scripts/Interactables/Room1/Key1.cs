@@ -11,7 +11,6 @@ public class Key1 : Interactable
         if(selectionSound != null)
             AudioManager.Instance.PlayEffect(selectionSound);
         DialogueManager.Instance.EnableDialogue(this, readyTextDialogue);
-        
     }
 
     public override void Finished()

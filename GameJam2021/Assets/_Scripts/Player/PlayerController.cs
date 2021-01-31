@@ -29,5 +29,10 @@ public class PlayerController : MonoBehaviour
             playerBody.velocity = playerInput.normalized * playerSpeed;
             playerRenderer.SetDirection(playerInput);
         }
+        else
+        {
+            playerBody.velocity = Vector2.zero;
+            playerRenderer.SetDirection(Vector2.zero);
+        }
     }
 }

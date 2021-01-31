@@ -8,6 +8,8 @@ public class PlayerRenderer : MonoBehaviour
     private Vector3 animDelay;
     [SerializeField]
     private PlayerLight playerLight;
+    [SerializeField]
+    private PlayerDetector playerDetector;
 
     private int lastDirection;
     private int currentDirection;
@@ -19,7 +21,7 @@ public class PlayerRenderer : MonoBehaviour
             // animDelay = direction;
             animDelay = Vector3.Lerp(animDelay, direction, 0.9f);
             lastDirection = currentDirection;
-            currentDirection = DirectionToIndex(direction); 
+            currentDirection = DirectionToIndex(direction);
             playerAnim.SetFloat("Horizontal", animDelay.x);
             playerAnim.SetFloat("Vertical", animDelay.y);
         }
@@ -31,6 +33,7 @@ public class PlayerRenderer : MonoBehaviour
         }
         playerAnim.SetFloat("Speed", moveSpeed);
         playerLight.SetLight(currentDirection);
+        playerDetector.SetDetector(currentDirection);
     }
 
     public int DirectionToIndex(Vector2 direction)

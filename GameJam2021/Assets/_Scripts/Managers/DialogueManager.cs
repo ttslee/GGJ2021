@@ -88,7 +88,6 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         displayDialogue.SetActive(false);
         selectedObject.Finished();
-
         inDialogue = false;
     }
 }
