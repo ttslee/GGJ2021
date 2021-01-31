@@ -25,6 +25,7 @@ public class ClockPuzzle : MonoBehaviour
         if(currentIndex == 4)
         {
             AudioManager.Instance.PlayEffect(completionSound);
+            GameManager.Instance.checkpoints[InteractableType.CLOCK] = true;
         }
             
     }

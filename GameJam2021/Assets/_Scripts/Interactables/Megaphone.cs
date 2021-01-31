@@ -24,7 +24,7 @@ public class Megaphone : Interactable
         {
             AudioManager.Instance.PlayEffect(selectionSound);
             StartCoroutine(AudioManager.Instance.DampenForAudioClip(.1f));
-            GameManager.Instance.checkpoints[InteractableType.MEGAPHONE] = true;
+            GameManager.Instance.checkpoints[interactableType] = true;
         }
         else
             base.Finished();

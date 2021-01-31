@@ -10,5 +10,6 @@ public class Record : MonoBehaviour
     {
         AudioManager.Instance.PlayEffect(clickedSound);
         GameManager.Instance.checkpoints[InteractableType.RECORD] = true;
+        Destroy(gameObject);
     }
 }

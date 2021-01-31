@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key2 : MonoBehaviour
+public class Key2 : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Interact()
     {
-        
+        base.Interact();
+        previousCheckpoint = GameManager.Instance.checkpoints[InteractableType.FIREPLACE];
+        if(previousCheckpoint)
+        {
+            DialogueManager.Instance.EnableDialogue(this, readyTextDialogue);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Finished()
     {
-        
+        if(selectionSound != null)
+            AudioManager.Instance.PlayEffect(selectionSound);
+        base.Finished();
+        Destroy(gameObject);
     }
 }
