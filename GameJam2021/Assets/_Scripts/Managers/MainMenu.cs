@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]private GameObject credits;
+
+    public void OnPlay()
     {
-        
+        SceneLoader.Instance.Load(1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnCredits()
     {
-        
+        credits.gameObject.SetActive(true);
+    }
+
+    public void CloseCredits()
+    {
+        credits.gameObject.SetActive(false);
+    }
+
+    public void OnQuit()
+    {
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+    #else
+        Application.Quit();
+    #endif
     }
 }
