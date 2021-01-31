@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
         {R1DRAWER, false},
         {R1CHEST, false},
         {R1PAINTING, false},
+        {R1TOME, false},
     };
 
     public void ResetGame()

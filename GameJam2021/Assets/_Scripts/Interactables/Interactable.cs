@@ -32,7 +32,7 @@ public class Interactable : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 
     public virtual void Interact()
     {
-        Debug.Log("Base Interact");
+        
     }
 
     private void ShowTooltip()
