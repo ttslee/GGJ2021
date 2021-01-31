@@ -9,11 +9,25 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int playerSpeed;
 
+    private void Update()
+    {
+        if (GameManager.Instance.inWorld)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                GameManager.Instance.OpenMenu();
+            }
+        }
+    }
+
     private void FixedUpdate()
     {
-        Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if (GameManager.Instance.inWorld)
+        {
+            Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        playerBody.velocity = playerInput.normalized * playerSpeed;
-        playerRenderer.SetDirection(playerInput);
+            playerBody.velocity = playerInput.normalized * playerSpeed;
+            playerRenderer.SetDirection(playerInput);
+        }
     }
 }
