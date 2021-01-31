@@ -13,6 +13,10 @@ public class PlayerRenderer : MonoBehaviour
 
     private int lastDirection;
     private int currentDirection;
+
+    private WaitForSeconds stepDelay = new WaitForSeconds(0.55f);
+    private bool canStep = true;
+
     public void SetDirection(Vector2 direction)
     {
         float moveSpeed = Mathf.Clamp(direction.magnitude, 0.0f, 1.0f);
@@ -24,6 +28,11 @@ public class PlayerRenderer : MonoBehaviour
             currentDirection = DirectionToIndex(direction);
             playerAnim.SetFloat("Horizontal", animDelay.x);
             playerAnim.SetFloat("Vertical", animDelay.y);
+            // Sound
+            if (canStep && !AudioManager.Instance.effectSource.isPlaying)
+            {
+                StartCoroutine(WaitForStep());
+            }
         }
         else if (direction == Vector2.zero)
         {
@@ -71,5 +80,13 @@ public class PlayerRenderer : MonoBehaviour
             return 7; // UpRight
         }
         return 5;
+    }
+
+    public IEnumerator WaitForStep()
+    {
+        canStep = false;
+        AudioManager.Instance.PlayFootstep();
+        yield return stepDelay;
+        canStep = true;
     }
 }

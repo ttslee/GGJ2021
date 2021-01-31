@@ -50,4 +50,17 @@ public class SceneLoader : Singleton<SceneLoader>
         sceneTransition.SetTrigger("End");
         yield return EndFadeFinished;
     }
+
+    public void Transition(Interactable obj) {
+        StartCoroutine(TransitionAsync(obj));
+    }
+
+    private IEnumerator TransitionAsync(Interactable obj)
+    {
+        sceneTransition.SetTrigger("Start");
+        yield return StartFadeFinished;
+        // obj.OpenInteract?
+        sceneTransition.SetTrigger("End");
+        yield return EndFadeFinished;
+    }
 }
