@@ -1009,8 +1009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableType: 5
   readyTextDialogue: Nice!
-  incompleteTextDialogue: I can see a book but I cant get to it, I need to find a
-    way to open this gate somehow...
+  incompleteTextDialogue: I can see something but I cant get to it, I need to find
+    a way to open this gate somehow...
   spriteRenderer: {fileID: 689810336}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
@@ -2249,10 +2249,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableType: 7
-  readyTextDialogue: 'A name. Elizabeth. Why does that name seem so familiar? Is
-    this who I was looking for?
-
-'
+  readyTextDialogue: A name. Elizabeth. Why does that name seem so familiar? Is this
+    who I was looking for?
   incompleteTextDialogue: 
   spriteRenderer: {fileID: 1134921414}
   regularSprite: {fileID: 21300000, guid: 826fdc044b6c44240881b006284f3275, type: 3}
@@ -2418,6 +2416,14 @@ PrefabInstance:
     - target: {fileID: 3519198383730185172, guid: 8ea035f75d2aedc45abbf6437d37888e, type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519198384451036151, guid: 8ea035f75d2aedc45abbf6437d37888e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301452231768223430, guid: 8ea035f75d2aedc45abbf6437d37888e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ea035f75d2aedc45abbf6437d37888e, type: 3}
@@ -3370,7 +3376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableType: 4
   readyTextDialogue: Hmm. There must be something I can do with this.
-  incompleteTextDialogue: 'A broken clock lies on this table. '
+  incompleteTextDialogue: A broken clock lies on this table.
   spriteRenderer: {fileID: 1643017316}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
