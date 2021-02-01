@@ -12,6 +12,7 @@ public class Fireplace : Interactable
         previousCheckpoint = GameManager.Instance.checkpoints[InteractableType.CLOCK];
         if(previousCheckpoint)
         {
+            GameManager.Instance.checkpoints[interactableType] = true;
             DialogueManager.Instance.EnableDialogue(this, readyTextDialogue);
             tome.SetActive(true);
             key2.SetActive(true);

@@ -10,6 +10,7 @@ public class Key2 : Interactable
         previousCheckpoint = GameManager.Instance.checkpoints[InteractableType.FIREPLACE];
         if(previousCheckpoint)
         {
+            GameManager.Instance.checkpoints[interactableType] = true;
             DialogueManager.Instance.EnableDialogue(this, readyTextDialogue);
         }
     }
