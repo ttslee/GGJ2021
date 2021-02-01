@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int playerSpeed;
 
-    private void Start() {
+    private void Start()
+    {
         playerRenderer.SetDirection(new Vector2(-0.5f, 0.5f));
     }
 
@@ -24,14 +25,14 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if(!GameManager.Instance.menuOpen)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if(Input.GetKeyDown(KeyCode.Escape))
+                GameObject menuObj = GameObject.FindGameObjectWithTag("Main");
+                if (menuObj != null)
                 {
-                    GameManager.Instance.currentInteractable.SetActive(false);
-                    GameManager.Instance.inWorld = true;
+                    Menu menu = menuObj.GetComponent<Menu>();
+                    if (menu != null) menu.OnResume();
                 }
-                    
             }
         }
     }

@@ -16,7 +16,6 @@ public class GameManager : Singleton<GameManager>
         {PAINTING, false},
         {TOME, false},
         {DOOR, false},
-        {KEY2, false},
     };
 
     public void ResetGame()
@@ -30,11 +29,17 @@ public class GameManager : Singleton<GameManager>
     public bool menuOpen = false;
     public bool inWorld = true;
     public GameObject currentInteractable;
-    
+
     public void OpenMenu()
     {
         menuOpen = true;
         inWorld = false;
         (GameObject.Instantiate(Resources.Load("Prefabs/Menu/Main")) as GameObject).GetComponent<Menu>().PlaySound();
+    }
+
+    public void CloseInteractable()
+    {
+        GameManager.Instance.currentInteractable.SetActive(false);
+        GameManager.Instance.inWorld = true;
     }
 }
