@@ -447,8 +447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableType: 1
-  readyTextDialogue: You unlock the cabinet.
-  incompleteTextDialogue: The cabinet is locked but it appears to have a keyhole.
+  readyTextDialogue: Lets try this key!
+  incompleteTextDialogue: "It\u2019s locked\u2026"
   spriteRenderer: {fileID: 210232997}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
@@ -831,8 +831,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableType: 5
-  readyTextDialogue: Woah, look at that! a book!
-  incompleteTextDialogue: What a magnificent old fireplace.
+  readyTextDialogue: Nice!
+  incompleteTextDialogue: I can see a book but I cant get to it, I need to find a
+    way to open this gate somehow...
   spriteRenderer: {fileID: 689810336}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
@@ -1273,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableType: 0
-  readyTextDialogue: An even more ornate key!!
+  readyTextDialogue: This must be the key to the door!
   incompleteTextDialogue: 
   spriteRenderer: {fileID: 874724045}
   regularSprite: {fileID: 0}
@@ -1629,7 +1630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1125832325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1647,7 +1648,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 430, y: 552.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1125832326
 MonoBehaviour:
@@ -1775,12 +1776,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableType: 7
-  readyTextDialogue: 'You feel a deep rumbling in your heart as the power of the
-    tome flows through your body. '
-  incompleteTextDialogue: "The tome is releasing purple energy from its binding.
-    This looks like the artifact you have been looking for!\nYou feel a deep rumbling
-    in your heart as the power of the tome flows through your body. \nYou feel a
-    deep rumbling in your heart as the power of the tome flows through your body!"
+  readyTextDialogue: "A name. \u201CElizabeth\u201D. Why does that name seem so familiar?
+    Is this who I was looking for?\r\n"
+  incompleteTextDialogue: 
   spriteRenderer: {fileID: 1134921414}
   regularSprite: {fileID: 21300000, guid: 826fdc044b6c44240881b006284f3275, type: 3}
   highlightedSprite: {fileID: 21300000, guid: 826fdc044b6c44240881b006284f3275, type: 3}
@@ -1868,8 +1866,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableType: 8
-  readyTextDialogue: I wondre if this key will work.
-  incompleteTextDialogue: The door is locked.
+  readyTextDialogue: Thank goodness!
+  incompleteTextDialogue: "It\u2019s locked. Maybe I can find a key. "
   spriteRenderer: {fileID: 1193187361}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
@@ -2116,7 +2114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableType: 3
   readyTextDialogue: You place the record from the cabinet onto the megaphone.
-  incompleteTextDialogue: The megaphone is playing a blank record...
+  incompleteTextDialogue: "An old record player. If only I had a Vinyl to play...\r"
   spriteRenderer: {fileID: 1383698300}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
@@ -2660,8 +2658,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableType: 4
-  readyTextDialogue: 'I wonder if I can push the numbers... '
-  incompleteTextDialogue: It seems like a regular clock.
+  readyTextDialogue: 'Hmm. There must be something I can do with this. '
+  incompleteTextDialogue: "A clock. It\u2019s ticking but the time is stopped. "
   spriteRenderer: {fileID: 1643017316}
   regularSprite: {fileID: 0}
   highlightedSprite: {fileID: 0}
@@ -3699,7 +3697,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 2109630177}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
