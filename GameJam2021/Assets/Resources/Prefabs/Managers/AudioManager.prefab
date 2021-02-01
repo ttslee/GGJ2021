@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersistent: 0
+  musicTrack:
+  - {fileID: 8300000, guid: bd2de1d5904cb65498791355e7f3f63a, type: 3}
+  - {fileID: 8300000, guid: bd2de1d5904cb65498791355e7f3f63a, type: 3}
+  - {fileID: 8300000, guid: 8cb05cd7f342c164abaa51587a4d8911, type: 3}
+  - {fileID: 8300000, guid: bd2de1d5904cb65498791355e7f3f63a, type: 3}
   musicSource: {fileID: 7498219133228278572}
+  ambientSource: {fileID: 0}
   effectSource: {fileID: 5131038674636508456}
   footSteps:
   - {fileID: 8300000, guid: 0ff7d3cd822afc345a0069171f2ad20d, type: 3}
