@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Fireplace : Interactable
 {
+    [SerializeField]private GameObject tome;
+    [SerializeField]private GameObject key2;
     public override void Interact()
     {
         base.Interact();
@@ -11,6 +13,9 @@ public class Fireplace : Interactable
         if(previousCheckpoint)
         {
             DialogueManager.Instance.EnableDialogue(this, readyTextDialogue);
+            tome.SetActive(true);
+            key2.SetActive(true);
+            gameObject.SetActive(false);
         }
         else
         {
