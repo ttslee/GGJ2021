@@ -37,7 +37,7 @@ public class SceneLoader : Singleton<SceneLoader>
 
         AsyncOperation sceneLoading = new AsyncOperation();
         sceneLoading = SceneManager.LoadSceneAsync(index);
-
+        AudioManager.Instance.PlayMusic(index);
         while (!sceneLoading.isDone)
         {
             if (sceneLoading.progress >= 0.9f)
