@@ -7,6 +7,7 @@ public class GameManager : Singleton<GameManager>
     public Dictionary<InteractableType, bool> checkpoints = new Dictionary<InteractableType, bool>
     {
         {KEY, false},
+        {KEY2, false},
         {CABINET, false},
         {RECORD, false},
         {MEGAPHONE, false},
