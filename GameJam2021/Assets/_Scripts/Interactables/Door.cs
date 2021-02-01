@@ -22,6 +22,6 @@ public class Door : Interactable
 
     private void EndGame()
     {
-        
+        SceneLoader.Instance.Load(3);
     }
 }
