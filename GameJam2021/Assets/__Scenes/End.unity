@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 745155555}
   - component: {fileID: 745155556}
   m_Layer: 0
-  m_Name: Tutorial
+  m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,33 +314,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 745155554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbcf18f441fc347459cd16a5deba2bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: a247ed9a67e58d349a1fd8b0cd50358b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDialogue: 'Where am I?
-
-    1:It''s cold and I can''t see anything.
-
-    2:The
-    floors and walls are all rickety.
-
-    I''m in a strange room...
-
-    How did
-    I get here? I can''t remember anything.
-
-    3:Did I get lost? Am I looking for
-    something?
-
-    ...
-
-    Regardless, this place gives me the creeps.
-
-    I should
-    find a way out.'
-  playerLight: {fileID: 386520947}
-  lanternLight: {fileID: 8300000, guid: 1b36ef30091dcda4f8a1d554fa58bef6, type: 3}
-  globalLight: {fileID: 1895553518}
+  textDialogue: "I\u2019ve finally escaped that dreadful room.\r\nBut it is only
+    the first of many.\r\nElizabeth? Why does that name make my heart ache?\r\nPerhaps
+    I was looking for you.\nMaybe you hold the answers that I seek.\nUntil I find
+    you, I will roam these haunted halls \r.\nEndlessly."
+  playerLight: {fileID: 0}
+  lanternLight: {fileID: 0}
+  globalLight: {fileID: 0}
 --- !u!1 &807567910
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +748,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7640857091088036057, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7640857091590688058, guid: c771d074dd2a8b24d85ba6efb8841b63, type: 3}
       propertyPath: m_IsActive

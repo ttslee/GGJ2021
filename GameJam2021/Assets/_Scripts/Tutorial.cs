@@ -14,17 +14,17 @@ public class Tutorial : MonoBehaviour
     public AudioClip lanternLight;
     public Light2D globalLight;
 
-    private void Start()
+    protected virtual void Start()
     {
         DialogueManager.Instance.EnableDialogue2(this, textDialogue);
     }
 
-    public void First()
+    public virtual void First()
     {
         StartCoroutine(FootSteps());
     }
 
-    private IEnumerator FootSteps()
+    protected virtual IEnumerator FootSteps()
     {
         int count = 0;
         while (count != 3)
@@ -37,12 +37,12 @@ public class Tutorial : MonoBehaviour
         Resume();
     }
 
-    public void Second()
+    public virtual void Second()
     {
         StartCoroutine(SecondAsync());
     }
 
-    private IEnumerator SecondAsync()
+    protected virtual IEnumerator SecondAsync()
     {
         yield return new WaitForSeconds(1.5f);
         globalLight.intensity = Mathf.Lerp(globalLight.intensity, 0.1f, 1f);
@@ -52,23 +52,23 @@ public class Tutorial : MonoBehaviour
         Resume();
     }
 
-    public void Third()
+    public virtual void Third()
     {
         StartCoroutine(ThirdAsync());
     }
 
-    private IEnumerator ThirdAsync()
+    protected virtual IEnumerator ThirdAsync()
     {
         yield return new WaitForSeconds(1.5f);
         Resume();
     }
 
-    public void End()
+    public virtual void Finish()
     {
         SceneLoader.Instance.Load(2);
     }
 
-    private void Resume()
+    protected virtual void Resume()
     {
         DialogueManager.Instance.ResumeDialogue();
     }
