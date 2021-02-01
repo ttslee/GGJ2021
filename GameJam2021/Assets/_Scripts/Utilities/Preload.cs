@@ -4,6 +4,7 @@ public class Preload : MonoBehaviour
 {
     private static string[] prefabs = {
             "Prefabs/SceneLoader",
+            "Prefabs/Managers/AudioManager",
             "Prefabs/Managers/GameManager",
             "Prefabs/Managers/DialogueManager"
         };
