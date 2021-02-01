@@ -98,7 +98,7 @@ public class Interactable : MonoBehaviour
             spriteRenderer.sprite = regularSprite;
     }
 
-    private void OnMouseDown()
+    protected virtual void OnMouseDown()
     {
         // Debug.Log("Interact");
         if (isHighlighted && GameManager.Instance.inWorld)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Painting : Interactable
 {
-    [SerializeField]private GameObject paintingRef;
+    [SerializeField] private GameObject paintingRef;
     public override void Interact()
     {
         base.Interact();
@@ -20,5 +20,14 @@ public class Painting : Interactable
     {
         paintingRef.SetActive(true);
         GameManager.Instance.currentInteractable = paintingRef;
+    }
+
+    protected override void OnMouseDown()
+    {
+        // Debug.Log("Interact");
+        if (GameManager.Instance.inWorld)
+        {
+            Interact();
+        }
     }
 }
