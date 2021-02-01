@@ -45,7 +45,7 @@ public class Tutorial : MonoBehaviour
     protected virtual IEnumerator SecondAsync()
     {
         yield return new WaitForSeconds(1.5f);
-        globalLight.intensity = Mathf.Lerp(globalLight.intensity, 0.1f, 1f);
+        globalLight.intensity = .25f;
         AudioManager.Instance.PlayEffect(lanternLight);
         playerLight.SetActive(true);
         yield return new WaitForSeconds(1.5f);
