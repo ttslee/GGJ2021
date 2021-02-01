@@ -220,7 +220,7 @@ public class DialogueManager : Singleton<DialogueManager>
         displayDialogue.SetActive(false);
         inDialogue = false;
         tutorialWait = false;
-        curTutorial.End();
+        curTutorial.Finish();
     }
 
     public void ResumeDialogue()
