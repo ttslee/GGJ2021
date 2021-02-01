@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
         {PAINTING, false},
         {TOME, false},
         {DOOR, false},
+        {KEY2, false},
     };
 
     public void ResetGame()
